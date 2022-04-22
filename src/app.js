@@ -7,7 +7,9 @@ import { NavBar, Footer, Loading, DirectoryList, Details } from './components';
 import { Home, Profile, ExternalApi } from './views';
 
 import './app.css';
+// Import Section above
 
+//Loading from the database
 const App = () => {
   const { isLoading } = useAuth0();
 
@@ -16,9 +18,11 @@ const App = () => {
   }
 
   return (
+    // Page Banner 
     <div id="app" className="d-flex flex-column h-100">
       <NavBar />
       <div className="container flex-grow-1">
+      // Routes to get info onto page
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/dj-list" component={DirectoryList} />
